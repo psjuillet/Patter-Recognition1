@@ -9,11 +9,12 @@ package Clasificadores;
  *
  * @author Alumno
  */
-public class PatronRepresentativo extends Patron{
-     private int contador;
+public class PatronRepresentativo extends Patron {
+    private int contador;
    
     public PatronRepresentativo(Patron a){
         super(a.getVector().length);
+        super.setClase(a.getClase());
         this.contador=0;
         acumular(a);
       
@@ -33,6 +34,8 @@ public class PatronRepresentativo extends Patron{
         }
         this.contador = 0;
     }
+
     
-}                                                                                             
+    
+}                                                                                  
     

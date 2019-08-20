@@ -61,7 +61,13 @@ private double vector[];
     public void setClaseResultante(String claseResultante) {
         this.claseResultante = claseResultante;
     }
-    
+        @Override
+    public boolean equals(Object obj) {
+        Patron aux = (Patron)obj;
+        String nombre = getClase();
+        return nombre.equals(aux.getClase());
+        
+    }
     
     
     

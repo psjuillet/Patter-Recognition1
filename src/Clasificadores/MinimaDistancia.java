@@ -64,6 +64,7 @@ private  ArrayList<PatronRepresentativo> representativos;
                 dMenor = dN;
                 iMenor = i;
             }
+            System.out.println();
         }
         patron.setClaseResultante(
                 this.representativos.get(iMenor).getClase());

@@ -18,12 +18,13 @@ import java.util.ArrayList;
 public class patterrecognition20201{
 
     public static void main(String[] args) {
-       
+       Patron pa=new Patron(new double[]{7,3.2,4.7,1.4},"");
         Herramientas.leerDatos();
         
         MinimaDistancia md = new MinimaDistancia();
         md.entrenar(Herramientas.instancias);
         md.clasificar(Herramientas.instancias);
+        
         System.out.println();
     }
     

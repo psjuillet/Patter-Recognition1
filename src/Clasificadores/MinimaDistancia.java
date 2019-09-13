@@ -5,7 +5,12 @@
  */
 package Clasificadores;
 
+import Clasificadores.PatronRepresentativo;
+import Clasificadores.Patron;
+import Clasificadores.MatrizConfusion;
+import Clasificadores.Herramientas;
 import java.util.ArrayList;
+
 
 /**
  *
@@ -14,6 +19,7 @@ import java.util.ArrayList;
 public class MinimaDistancia implements ClasificadorSupervisado {
 
 private  ArrayList<PatronRepresentativo> representativos;
+  private MatrizConfusion mc;
     
     public MinimaDistancia() {
         this.representativos = new ArrayList<PatronRepresentativo>();
@@ -76,6 +82,10 @@ private  ArrayList<PatronRepresentativo> representativos;
        for(Patron p: patrones){
            clasificar(p);
        }
+       this.mc=new MatrizConfusion(patrones);
+    }
+    public MatrizConfusion getMc(){
+        return mc;
     }
 
    

@@ -8,6 +8,7 @@ package patterrecognition2020;
 import Clasificadores.Herramientas;
 import Clasificadores.MinimaDistancia;
 import Clasificadores.Patron;
+import Clasificadores.Knn;
 import Clasificadores.PatronRepresentativo;
 import java.util.ArrayList;
 
@@ -18,14 +19,14 @@ import java.util.ArrayList;
 public class patterrecognition20201{
 
     public static void main(String[] args) {
-       Patron pa=new Patron(new double[]{7,3.2,4.7,1.4},"");
-        Herramientas.leerDatos();
-        
-        MinimaDistancia md = new MinimaDistancia();
+        MinimaDistancia md= new MinimaDistancia();
         md.entrenar(Herramientas.instancias);
         md.clasificar(Herramientas.instancias);
-        
-        System.out.println();
+        System.out.println(md.getMc().toString());
+        Knn knn= new Knn(4);
+        knn.entrenar(Herramientas.instancias);
+        knn.clasificar((ArrayList<Patron>)Herramientas.instancias.clone());
+        System.out.println(knn.getMc().toString());
     }
-    
-}
+
+}    

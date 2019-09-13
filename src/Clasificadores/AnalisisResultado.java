@@ -21,8 +21,9 @@ public class AnalisisResultado {
     }
 
     Vector<Vector<Double>> matriz=new Vector<Vector<Double>>();
-    for(int i=0;i<10;i++){
+  //  for(int i=0;i<10;i++){
         Vector<Double> v= new Vector<>();
        
     }
-}
+//}
+
